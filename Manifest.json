@@ -1,0 +1,17 @@
+{
+  "name": "LoginTicketWidget",
+  "version": "1.0",
+  "description": "Widget pour obtenir un login ticket, un token CSRF et gérer le drag & drop",
+  "icon": "icon.png",
+  "ui": "LoginTicketWidget.html",
+  "entry": "LoginTicketWidget.js",
+  "category": "Tools",
+  "events": {
+    "onDragEnter": {},
+    "onDragLeave": {},
+    "onDrop": {}
+  },
+  "requires": {
+    "3DSearch": {}
+  }
+}

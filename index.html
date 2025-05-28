@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Ticket & Drag & Drop</title>
+  <script src="LoginTicketWidget.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 40px;
+      color: #333;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 25px 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .section h2 {
+      margin-top: 0;
+    }
+
+    button {
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    .result-box {
+      margin-top: 15px;
+      padding: 12px 16px;
+      background-color: #eaf4ff;
+      border-left: 5px solid #0078d7;
+      border-radius: 6px;
+      font-size: 15px;
+      word-break: break-word;
+    }
+
+    #dropZone {
+      margin-top: 20px;
+      padding: 40px;
+      border: 3px dashed #0078d7;
+      border-radius: 12px;
+      background-color: #fdfdfd;
+      text-align: center;
+      color: #555;
+      font-size: 16px;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    #dropZone.dragover {
+      background-color: #eaf4ff;
+      border-color: #005fa3;
+    }
+
+    #droppedObjects {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .object-item {
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .object-item:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h2>Obtenir un Login Ticket</h2>
+    <button id="getTicketBtn">Obtenir le ticket</button>
+    <div id="result" class="result-box">Le ticket s'affichera ici.</div>
+  </div>
+
+  <div class="section">
+    <h2>Obtenir un Token CSRF</h2>
+    <button id="getCsrfBtn">Obtenir le token CSRF</button>
+    <div id="csrfResult" class="result-box">Le token CSRF s'affichera ici.</div>
+  </div>
+
+  <div class="section">
+    <h2>Déposez ici des objets 3DX</h2>
+    <div id="dropZone">Glissez-déposez des objets ici depuis 3DSearch ou 3DSpace</div>
+    <div id="droppedObjects"></div>
+  </div>
+
+</body>
+</html>
