@@ -7,7 +7,7 @@ require([
   widget.addEvent('onLoad', function () {
     // Bouton pour obtenir le ticket
     document.getElementById('getTicketBtn').addEventListener('click', function () {
-      const url = "https://3dxatrdev.de.cenit-group.com/3dpassport/login?action=get_auth_params";
+      const url = "https://r1132101389013-eu1.iam.3dexperience.3ds.com/login?action=get_auth_params";
 
       WAFData.authenticatedRequest(url, {
         method: 'GET',
@@ -24,7 +24,7 @@ require([
 	
 	document.getElementById('getCsrfBtn').addEventListener('click', function () {
 	const tenant = 'votre_tenant'; // Remplace par la valeur réelle
-	const url = `https://3dxatrdev.de.cenit-group.com/3dspace/resources/v1/application/CSRF?tenant=3dxatrdev`;
+	const url = `https://r1132101389013-eu1-space.3dexperience.3ds.com/enovia/resources/v1/application/CSRF?tenant=3dxatrdev`;
 
  
 	WAFData.authenticatedRequest(url, {
